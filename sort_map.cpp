@@ -46,8 +46,8 @@ int main()
 
     map<animal, int> animalObject;
     animal bear{10, "bear"}, tiger{100, "tiger"};
-//    animalObject.insert(pair<animal, int>(bear, 1));
-    animalObject[bear] = 1;
+    animalObject.insert(pair<animal, int>(bear, 1));
+//    animalObject[bear] = 1;//both are ok
     animalObject.insert(map<animal, int>::value_type(tiger, 2));
     for(auto p = animalObject.begin(); p != animalObject.end(); p++)
         cout << p->first.m_size << endl;
